@@ -3,7 +3,14 @@
     (replacing the placeholder with your Github name):
     https://api.github.com/users/<your name>
 */
-
+axios
+  .get(`https://api.github.com/users/AWhitt14`)
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((er) => {
+    console.log(`${er}, You done fucked up!`);
+  });
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
     github info! You will need to understand the structure of this
@@ -49,7 +56,11 @@ const followersArray = [];
       </div>
     </div>
 */
-
+function cardCreator(obj) {
+  const cont = document.createElement('div');
+  cont.classList.add('card');
+  
+}
 /*
   List of LS Instructors Github username's:
     tetondan
